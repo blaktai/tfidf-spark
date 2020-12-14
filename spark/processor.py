@@ -1,7 +1,7 @@
 from pyspark import SparkContext
 from operator import add
 from math import log
-
+import numpy as np 
 class TFIDFProcessor:
 
     @staticmethod
