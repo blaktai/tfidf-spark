@@ -26,7 +26,7 @@ class TFIDFProcessor:
         all_doc_ids = rdd.map(lambda line: line.split(' ')[0])
         terms_map = all_terms.zipWithIndex().collectAsMap()
         doc_map = all_doc_ids.zipWithIndex().collectAsMap()
-        return make_matrix(tf_idf_sparse_matrix, terms_map, doc_map))    
+        return make_matrix(tf_idf_sparse_matrix, terms_map, doc_map)    
 
 
 def extract_terms(line):
@@ -60,5 +60,3 @@ def make_matrix(data, term_map, document_map):
             term_index = term_map[term]
             matrix[doc_index][term_index] = value
     return matrix
-
-class Consine
