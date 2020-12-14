@@ -1,4 +1,6 @@
 from pyspark import SparkContext
+from operator import add
+from math import log
 
 class TFIDFProcessor:
 
